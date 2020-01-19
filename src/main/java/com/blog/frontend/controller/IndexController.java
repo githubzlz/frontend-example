@@ -2,6 +2,8 @@ package com.blog.frontend.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author zhulinzhong
@@ -9,6 +11,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 @Controller
 public class IndexController {
+
+    @RequestMapping("httpstest")
+    @ResponseBody
+    public String test(){
+        return "https访问成功";
+    }
 
     /**
      * 添加angular的所有路由
